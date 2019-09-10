@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+	
+</head>
+
+<body>
+	<form>
+	
+	<input type="text" placeholder="enter first value" id="first"><br>
+	<input type="text" placeholder="enter second value" id="second"><br>
+	<input type="text" placeholder="enter third value" id="third"><br>
+		<input type="button" value="add" onclick="sanjay()"><br>
+		<input type="text" placeholder="enter third value" id="answer">
+	</form>
+	<script>
+		function sanjay(){
+	a=Number(document.getElementById("first").value);
+	b=Number(document.getElementById("second").value);
+	c=Number(document.getElementById("third").value);
+	d=a+b+c;
+		document.getElementById("answer").value=d;
+		}
+		</script>
+</body>
+</html>
