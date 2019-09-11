@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+	
+</head>
+
+<body>
+	<form>
+	
+	<input type="text" placeholder="enter first value" id="first"><br>
+	<input type="text" placeholder="enter second value" id="second"><br>
+	<input type="text" placeholder="enter third value" id="third"><br>
+		<input type="text" placeholder="enter forth value" id="forth"><br>
+		<input type="button" value="add" onclick="sanjay()"><br>
+		<input type="text" placeholder="total" id="answer"><br>
+		<input type="text" placeholder="percentage" id="per"><br>
+		<input type="text" placeholder="result" id="result"><br>
+		<input type="text" placeholder="grade" id="grade">
+	</form>
+	<script>
+		function sanjay(){
+	a=Number(document.getElementById("first").value);
+	b=Number(document.getElementById("second").value);
+	c=Number(document.getElementById("third").value);
+	d=Number(document.getElementById("forth").value);
+	total=a+b+c+d;
+			per=total/4;
+		document.getElementById("answer").value=total;
+		document.getElementById("per").value=per;
+			if(per>=33)
+				{
+				document.getElementById("result").value="pass";	
+				}
+			else{
+				document.getElementById("result").value="fail";
+			}
+			if(per>=90)
+				{
+					document.getElementById("grade").value="Grade is A";
+				}
+			else if(per>=80)
+				{
+					document.getElementById("grade").value="Grade is B";
+				}
+			else if(per>=70)
+				{
+					document.getElementById("grade").value="Grade is C";
+				}
+			else if(per>=60)
+				{
+					document.getElementById("grade").value="Grade is D";
+				}
+			else if(per>=50)
+				{
+					document.getElementById("grade").value="Grade is E";
+				}
+			else if(per>=33)
+				{
+					document.getElementById("grade").value="Grade is F";
+				}
+			else{
+				document.getElementById("grade").value="No Grade";
+			}
+		}
+		</script>
+</body>
+	<!--
+< less than
+> greatet than
+<=less than equal to
+>= greater than equal to
+== comaprission
+=== comaprision with data type
+%  modulas
+-->
+</html>
