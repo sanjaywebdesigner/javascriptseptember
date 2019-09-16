@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<input type="text" id="s1"><br>
+	<input type="button" onclick="sanjay()">
+	<p></p>
+	<script>
+		function sanjay()
+		{
+			a=Number(document.getElementById("s1").value);
+			if(a%4==0)
+				{
+				document.querySelector("p").innerHTML="leap year";	
+				}
+			else{
+				document.querySelector("p").innerHTML="not a leap year";	
+			}
+		}
+	</script>
+</body>
+</html>

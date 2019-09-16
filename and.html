@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<input type="text" id="s1" placeholder="enter male or female"><br>
+	<input type="text" id="s2" placeholder="enter post"><br>
+	<input type="text" id="s3" placeholder="enter salary"><br>
+	<input type="button" onclick="sanjay()" value="calculate">
+	<p></p>
+	<script>
+		function sanjay()
+		{
+			a=document.getElementById("s1").value;
+			b=document.getElementById("s2").value;
+			c=Number(document.getElementById("s3").value);
+			if(a=="male" && b=="manager")
+				{
+					salary=c*1.6;
+				}
+			else if(a=="female" && b=="manager")
+				{
+					salary=c*1.8;
+				}
+			else if(a=="female" && b=="clerk")
+				{
+					salary=c*1.5;
+				}
+			else if(a=="male" && b=="clerk")
+				{
+					salary=c*1.3;
+				}
+			else{
+				salary=c;
+			}
+			document.querySelector("p").innerHTML=salary;
+		}
+	</script>
+</body>
+</html>

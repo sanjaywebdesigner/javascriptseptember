@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<input type="text" id="s1" placeholder="enter mailid or usernam"><br>
+	<input type="text" id="s2" placeholder="enter password"><br>
+
+	<input type="button" onclick="sanjay()" value="calculate">
+	<p></p>
+	<script>
+		function sanjay()
+		{
+			a=document.getElementById("s1").value;
+			b=document.getElementById("s2").value;
+			
+			if(a=="sanjay" || a=="sanjay@gmail.com")
+				{
+					if(b=="123456")
+						{
+							document.querySelector("p").innerHTML="correct";
+						}
+					else{
+						document.querySelector("p").innerHTML="password incorrect";
+					}
+				}
+			else
+				{
+					document.querySelector("p").innerHTML="username correct";
+				}
+			
+		}
+	</script>
+</body>
+</html>

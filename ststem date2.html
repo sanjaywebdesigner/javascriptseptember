@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<input type="text" id="s1" placeholder="date"><br>
+	<input type="text" id="s2" placeholder="month"><br>
+<input type="text" id="s3" placeholder="year"><br>
+	<input type="text" id="s4" placeholder="Hours"><br>
+	<input type="text" id="s5" placeholder="Minutes"><br>
+<input type="text" id="s6" placeholder="Seconds"><br>
+	<input type="button" onclick="sanjay()" value="calculate">
+	
+	<script>
+		function sanjay()
+		{
+			a=new Date();
+			b=a.getDate();
+			c=a.getMonth()+1;
+			d=a.getFullYear();
+			e=a.getHours();
+			f=a.getMinutes();
+			g=a.getSeconds();
+			document.getElementById("s1").value=b;
+			document.getElementById("s2").value=c;
+document.getElementById("s3").value=d;
+			document.getElementById("s4").value=e;
+			document.getElementById("s5").value=f;
+document.getElementById("s6").value=g;
+			
+		}
+	</script>
+</body>
+</html>
