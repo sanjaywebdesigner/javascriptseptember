@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<input type="text" id="ss"><br>
+	
+	<input type="button" value="tax" onclick="calc()">
+	<script>
+	function calc()
+		{
+			a=Number(document.getElementById("ss").value);
+			if(a<=250000)
+				{
+					document.write("no tax");
+				}
+		}
+	</script>
+</body>
+</html>

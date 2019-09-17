@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<input type="text" id="ss"><br>
+	<input type="text" id="ss1"><br>
+	<input type="button" value="tax" onclick="calc()">
+	<script>
+	function calc()
+		{
+			a=Number(document.getElementById("ss").value);
+			if(a<=250000)
+				{
+					document.getElementById("ss1").value="no tax";
+				}
+			else if(a>250000 && a<=500000)
+				{
+				tax=(a-250000)*.05;	
+					document.getElementById("ss1").value=tax;
+				}
+			else if(a>500000 && a<=1000000)
+				{
+				tax=(a-500000)*.2+12500;	
+					document.getElementById("ss1").value=tax;
+				}
+			else{
+				document.getElementById("ss1").value="wrong value";
+			}
+		}
+	</script>
+</body>
+</html>
