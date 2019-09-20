@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<input type="text" id="a1"><br>
+	<input type="button" onclick="s1()">
+	<p id="d12"></p>
+	<script>
+	function s1()
+		{
+			a=document.getElementById("a1").value;
+			b=a.charCodeAt(0);
+			if(!((b>=65 && b<=90) || (b>=97 && b<=122)))
+				{
+				document.getElementById("d12").innerHTML="please enter only capiatal or small letter in starting"	;
+				}
+			else{
+				document.getElementById("d12").innerHTML="correct";
+			}
+		}
+	</script>
+</body>
+	
+	
+	<!--
+
+A 65
+B 66
+Z 90
+a 97
+b 98
+z 122
+0 48
+9 57
+special characters   33 to 47  and 58 to 64
+-->
+</html>

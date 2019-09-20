@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<input type="text" id='sanjay'>
+	<br>
+	<input type="button" onclick="s2()">
+	<p id="gg"></p>
+	<script>
+	function s2()
+		{
+			a=document.getElementById("sanjay").value;
+			b=a.length;
+			c=a.indexOf(" ");
+			d=b-c;
+			if(b<8)
+				{
+					document.getElementById("gg").innerHTML="please enter minimum 8";
+				}
+			else if(c==-1)
+				{
+					document.getElementById("gg").innerHTML="please enter surname";
+				}
+			else if(c<4)
+				{
+					document.getElementById("gg").innerHTML="please enter minimum 4 chacreter in first name";
+				}
+			else if(d<5)
+				{
+					document.getElementById("gg").innerHTML="please enter minimum 4 chacreter in last name";
+				}
+			
+			else{
+				document.getElementById("gg").innerHTML="correct";
+			}
+		}
+	</script>
+</body>
+</html>
