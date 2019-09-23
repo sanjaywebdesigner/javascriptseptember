@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<input type="text" id="ss"><br>
+	<input type="button" onclick="val()">
+	<p id="ss1"></p>
+	<script>
+	function val()
+		{
+			a=document.getElementById("ss").value;
+			b=a.length;
+			c=a.indexOf("@");
+			d=a.indexOf(".");
+			e=a.lastIndexOf(".");
+			f=d-c;
+		
+			if(b<8)
+				{
+					document.getElementById("ss1").innerHTML="please enter min 8 characters";
+				}
+			else if(c==-1)
+				{
+				document.getElementById("ss1").innerHTML="please enter @";	
+				}
+			else if(d==-1)
+				{
+				document.getElementById("ss1").innerHTML="please enter .";	
+				}
+			else if(f<4)
+				{
+				document.getElementById("ss1").innerHTML="please enter min 3 character between @ and .";	
+				}
+			else if(c<5)
+				{
+				document.getElementById("ss1").innerHTML="please enter min 5 character before @";	
+				}
+			else{
+				document.getElementById("ss1").innerHTML="correct";
+			}
+		}
+	</script>
+</body>
+</html>

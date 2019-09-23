@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<input type="text" id="ss" placeholder="enter current date"><br>
+	<input type="text" id="ss1" placeholder="enter current month"><br>
+	<input type="text" id="ss2" placeholder="enter current year"><br>
+	<input type="text" id="ss3" placeholder="enter previus date"><br>
+	<input type="text" id="ss4" placeholder="enter previus month"><br>
+	<input type="text" id="ss5" placeholder="enter previus year"><br>
+	<input type="button" onclick="val()">
+	<p id="ss6"></p>
+	<script>
+	function val()
+		{
+			cdate=Number(document.getElementById("ss").value);
+			cmonth=Number(document.getElementById("ss1").value);
+			cyear=Number(document.getElementById("ss2").value);
+			pdate=Number(document.getElementById("ss3").value);
+			pmonth=Number(document.getElementById("ss4").value);
+			pyear=Number(document.getElementById("ss5").value);
+			if(cdate>pdate)
+				{
+			ddate=cdate-pdate;
+			dmonth=cmonth-pmonth;
+					if(dmonth>pmonth)
+						{dyear=cyear-pyear;}
+					else
+						{
+							dmonth=dmonth+12;
+							dyear=cyear-pyear-1;
+						}
+			
+					}
+			else{
+				ddate=cdate-pdate+30;
+				dmonth=cmonth-pmonth-1;
+				if(dmonth>pmonth)
+						{dyear=cyear-pyear;}
+					else
+						{
+							dmonth=dmonth+12;
+							dyear=cyear-pyear-1;
+						}
+			
+			}
+			document.getElementById("ss6").innerHTML=ddate+" - "+dmonth+" - "+dyear;
+		}
+	</script>
+</body>
+</html>
