@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	
+	<input type="text"><br>
+	<input type="text"><br>
+	
+	<input type="button" value="+"><input type="button" value="-"><input type="button" value="*"><input type="button" value="/">
+	<p></p>
+	<script>
+	d=0;
+	a=document.querySelectorAll("input");
+		b=a.length-1;
+		a[b-3].addEventListener("click",ss);
+		a[b-2].addEventListener("click",ss1);
+		a[b-1].addEventListener("click",ss2);
+		a[b].addEventListener("click",ss3);
+		function ss()
+		{
+			a=document.querySelectorAll("input");
+			for(i=0;i<a.length-4;i++)
+				{
+					d=d+Number(a[i].value);
+				}
+			document.querySelector("p").innerHTML=d;
+		}
+		function ss1()
+		{
+			a=document.querySelectorAll("input");
+			d=Number(a[0].value)-Number(a[1].value);
+			document.querySelector("p").innerHTML=d;
+		}
+		function ss2()
+		{
+			a=document.querySelectorAll("input");
+			d=Number(a[0].value)*Number(a[1].value);
+			document.querySelector("p").innerHTML=d;
+		}function ss3()
+		{
+			a=document.querySelectorAll("input");
+			d=Number(a[0].value)/Number(a[1].value);
+			document.querySelector("p").innerHTML=d;
+		}
+		</script>
+</body>
+</html>

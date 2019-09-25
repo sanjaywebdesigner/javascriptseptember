@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="button" value="calculate">
+	<p></p>
+	<script>
+	d=0;
+	a=document.querySelectorAll("input");
+		b=a.length-1;
+		a[b].addEventListener("click",ss);
+		function ss()
+		{
+			a=document.querySelectorAll("input");
+			for(i=0;i<a.length-1;i++)
+				{
+					d=d+Number(a[i].value);
+				}
+			document.querySelector("p").innerHTML=d;
+		}
+		</script>
+</body>
+</html>
