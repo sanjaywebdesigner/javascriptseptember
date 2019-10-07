@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<p>sanjay</p>
+	<p>sanjay1</p>
+	<p>sanjay2</p>
+	<p>sanjay3</p>
+	<p>sanjay4</p>
+	<input type="text" id="ff" placeholder="enter value of search"><br>
+	<input type="text" id="ff1" placeholder="enter new value"><br>
+	
+	<input type="button" onclick="ss()">
+	<div id="s2"></div>
+	<script>
+		temp=0;
+	function ss()
+		{
+			a=document.querySelectorAll("p");
+			b=document.getElementById("ff").value;
+			c=document.getElementById("ff1").value;
+			for(i=0;i<a.length;i++)
+				{
+					if(a[i].innerHTML==b)
+						{
+						a[i].innerHTML=c;	
+						}
+				}
+			
+		}
+	</script>
+</body>
+</html>
